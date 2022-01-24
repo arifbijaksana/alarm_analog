@@ -1,0 +1,69 @@
+import 'package:alrm_analog/screens/clock/clock_circle_painter.dart';
+import 'package:flutter/material.dart';
+import 'hour_hand.dart';
+import 'minute_hand.dart';
+
+class Clock extends StatefulWidget {
+  const Clock({Key? key}) : super(key: key);
+
+  @override
+  _ClockState createState() => _ClockState();
+}
+
+class _ClockState extends State<Clock> with TickerProviderStateMixin {
+  double wheelSize = 300;
+  final double longNeedleHeight = 40;
+  final double shortNeedleHeight = 25;
+
+  @override
+  Widget build(BuildContext context) {
+    // WheelCircle wheelCircle = WheelCircle(
+    //     wheelSize: wheelSize,
+    //     longNeedleHeight: longNeedleHeight,
+    //     shortNeedleHeight: shortNeedleHeight,
+    //     context: context);
+
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.all(40),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+          ),
+        ),
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            SizedBox(
+              width: wheelSize,
+              height: wheelSize,
+              child: Container(
+                  color: Colors.transparent,
+                  child: Center(
+                      child: CustomPaint(
+                    painter: ClockCirclePainter(),
+                  ))),
+            ),
+            Container(
+              width: wheelSize,
+              height: wheelSize,
+              color: Colors.transparent,
+              child: Center(
+                child: Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+              ),
+            ),
+            MinuteHand(),
+            HourHand(),
+          ],
+        )
+      ],
+    );
+  }
+}
