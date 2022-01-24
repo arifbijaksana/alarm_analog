@@ -6,11 +6,10 @@ Name : Alarm Analog App is a simple alarm application
 
 This project for Test Assignment from stockbit.
 
-A few resources to get you started if this is your first Flutter project:
+Below A few resources for project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Source Code: Alarm app](https://github.com/arifbijaksana/alarm_analog)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+For Documentation instruction
+
+- [Demo Video & Image](https://drive.google.com/drive/folders/1JyzWteE84EduT3x9MRDd4-GitT4fQ6ir?usp=sharing)
